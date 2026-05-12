@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <h2 class="text-success">🌱 Növényadatbázis</h2>
+  </div>
+</div>
+
+<div class="row mb-4">
+  <div class="col-md-6">
+    <input
+      type="text"
+      id="search"
+      class="form-control"
+      placeholder="Keresés..."
+    />
+  </div>
+  <div class="col-md-3">
+    <select id="filter-type" class="form-select">
+      <option value="">Minden típus</option>
+      <option value="beltéri">Beltéri</option>
+      <option value="kültéri">Kültéri</option>
+      <option value="kaktusz">Kaktusz</option>
+      <option value="vízinövény">Vízinövény</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <select id="filter-difficulty" class="form-select">
+      <option value="">Minden nehézség</option>
+      <option value="kezdő">Kezdő</option>
+      <option value="haladó">Haladó</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+</div>
+
+<div class="row g-4" id="plants-container">
+  <div class="col-12 text-center">
+    <div class="spinner-border text-success" role="status"></div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

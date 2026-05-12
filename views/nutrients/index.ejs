@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12">
+    <h2 class="text-success">🧪 Tápanyag kalkulátor</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h5 class="mb-3">Kalkulátor</h5>
+      <div class="mb-3">
+        <label class="form-label">Növény kiválasztása</label>
+        <select id="plantSelect" class="form-select">
+          <option value="">-- Válassz növényt --</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cserépszám</label>
+        <input
+          type="number"
+          id="pot-count"
+          class="form-control"
+          placeholder="pl. 5"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Terület (m²)</label>
+        <input
+          type="number"
+          id="area"
+          class="form-control"
+          placeholder="pl. 10"
+        />
+      </div>
+      <button class="btn btn-success w-100" onclick="calculate()">
+        Kalkulálás
+      </button>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-4" id="result-card" style="display: none">
+      <h5 class="mb-3">Eredmény</h5>
+      <div id="result-content"></div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
+
