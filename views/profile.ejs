@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card p-4 mb-4">
+      <h3 class="text-success mb-4">👤 Profil</h3>
+      <div id="profile-content">
+        <div class="text-center">
+          <div class="spinner-border text-success" role="status"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-4 mb-4">
+      <h5 class="text-success mb-3">🔒 Jelszó módosítás</h5>
+      <div
+        id="password-error"
+        class="alert alert-danger"
+        style="display: none"
+      ></div>
+      <div
+        id="password-success"
+        class="alert alert-success"
+        style="display: none"
+      ></div>
+      <div class="mb-3">
+        <label class="form-label">Jelenlegi jelszó</label>
+        <input
+          type="password"
+          id="current-password"
+          class="form-control"
+          placeholder="Jelenlegi jelszó"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Új jelszó</label>
+        <input
+          type="password"
+          id="new-password"
+          class="form-control"
+          placeholder="Új jelszó"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Új jelszó mégegyszer</label>
+        <input
+          type="password"
+          id="new-password-confirm"
+          class="form-control"
+          placeholder="Új jelszó mégegyszer"
+        />
+      </div>
+      <button class="btn btn-success w-100" onclick="changePassword()">
+        Jelszó módosítása
+      </button>
+    </div>
+
+    <div class="card p-4">
+      <h5 class="text-success mb-3">📋 Rendeléseim</h5>
+      <div id="my-orders">
+        <div class="text-center">
+          <div class="spinner-border text-success" role="status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
