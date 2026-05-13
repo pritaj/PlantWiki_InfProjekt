@@ -1,0 +1,125 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background-color: #198754;
+}
+
+/* Sötét mód */
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #16213e;
+  border-color: #0f3460;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #0f3460 !important;
+}
+
+body.dark-mode .card-footer {
+  background-color: #0f3460;
+  border-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .table {
+  color: #e0e0e0;
+  border-color: #0f3460;
+}
+
+body.dark-mode .table td,
+body.dark-mode .table th {
+  background-color: #16213e;
+  color: #e0e0e0;
+  border-color: #0f3460;
+}
+
+body.dark-mode .table-bordered td,
+body.dark-mode .table-bordered th {
+  border-color: #0f3460;
+}
+
+body.dark-mode .table-success {
+  background-color: #0f3460 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .table-success td,
+body.dark-mode .table-success th {
+  background-color: #0f3460 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #a0a0a0 !important;
+}
+
+body.dark-mode .modal-content {
+  background-color: #16213e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal-header {
+  border-color: #0f3460;
+}
+
+body.dark-mode .modal-footer {
+  border-color: #0f3460;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #0f3460;
+  color: #e0e0e0;
+  border-color: #1a1a2e;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #0f3460;
+  color: #e0e0e0;
+}
+
+body.dark-mode .text-muted {
+  color: #a0a0a0 !important;
+}
+
+body.dark-mode .bg-light {
+  background-color: #0f3460 !important;
+}
+
+body.dark-mode .border-bottom {
+  border-color: #0f3460 !important;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #3d0000;
+  border-color: #6d0000;
+  color: #ff9999;
+}
+
+body.dark-mode .alert-success {
+  background-color: #003d00;
+  border-color: #006d00;
+  color: #99ff99;
+}
