@@ -10,7 +10,7 @@ Egy teljes körű Node.js-alapú webalkalmazás, amely egyesíti a növényadatb
 - Webshop
 - Tápanyag-kalkulátor
 - Gondozási Wiki
-- JWT autentikáció 
+- JWT autentikáció  
 
 ---
 
