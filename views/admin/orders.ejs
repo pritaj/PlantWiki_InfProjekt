@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12">
+    <h2 class="text-success">📦 Rendelések kezelése</h2>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="table-success">
+      <tr>
+        <th>ID</th>
+        <th>Felhasználó</th>
+        <th>Státusz</th>
+        <th>Végösszeg</th>
+        <th>Szállítási cím</th>
+        <th>Dátum</th>
+        <th>Műveletek</th>
+      </tr>
+    </thead>
+    <tbody id="orders-tbody"></tbody>
+  </table>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12">
+    <h2 class="text-success">📊 Statisztikák</h2>
+  </div>
+</div>
+
+<!-- Számok -->
+<div class="row g-3 mb-4" id="stats-counts"></div>
+
+<!-- Grafikonok -->
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h6 class="text-success mb-3">📦 Rendelések státusz szerint</h6>
+      <canvas id="orderChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h6 class="text-success mb-3">🌱 Növények típus szerint</h6>
+      <canvas id="plantChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h6 class="text-success mb-3">🛒 Termékek kategória szerint</h6>
+      <canvas id="productChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<%- include('../partials/footer') %>

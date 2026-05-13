@@ -1,0 +1,173 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <h2 class="text-success">📖 Wiki cikkek kezelése</h2>
+    <button
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#addArticleModal"
+    >
+      + Új cikk
+    </button>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="table-success">
+      <tr>
+        <th>ID</th>
+        <th>Cím</th>
+        <th>Kategória</th>
+        <th>Növény</th>
+        <th>Műveletek</th>
+      </tr>
+    </thead>
+    <tbody id="wiki-tbody"></tbody>
+  </table>
+</div>
+
+<!-- Új cikk modal -->
+<div class="modal fade" id="addArticleModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Új wiki cikk</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div
+          id="add-article-error"
+          class="alert alert-danger"
+          style="display: none"
+        ></div>
+        <div class="mb-3">
+          <label class="form-label">Cím</label>
+          <input type="text" id="add-article-title" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Slug (URL)</label>
+          <input
+            type="text"
+            id="add-article-slug"
+            class="form-control"
+            placeholder="pl. monstera-ontözes"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tartalom</label>
+          <textarea
+            id="add-article-content"
+            class="form-control"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Kategória</label>
+          <select id="add-article-category" class="form-select">
+            <option value="öntözés">Öntözés</option>
+            <option value="betegségek">Betegségek</option>
+            <option value="kártevők">Kártevők</option>
+            <option value="szaporítás">Szaporítás</option>
+            <option value="szezonális gondozás">Szezonális gondozás</option>
+            <option value="egyéb">Egyéb</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Növény ID (opcionális)</label>
+          <input type="number" id="add-article-plantid" class="form-control" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Kép feltöltése (opcionális)</label>
+        <input
+          type="file"
+          id="add-article-image"
+          class="form-control"
+          accept="image/*"
+        />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Mégse
+        </button>
+        <button type="button" class="btn btn-success" onclick="addArticle()">
+          Hozzáadás
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Szerkesztés modal -->
+<div class="modal fade" id="editArticleModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Wiki cikk szerkesztése</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="edit-article-id" />
+        <div class="mb-3">
+          <label class="form-label">Cím</label>
+          <input type="text" id="edit-article-title" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Slug (URL)</label>
+          <input type="text" id="edit-article-slug" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tartalom</label>
+          <textarea
+            id="edit-article-content"
+            class="form-control"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Kategória</label>
+          <select id="edit-article-category" class="form-select">
+            <option value="öntözés">Öntözés</option>
+            <option value="betegségek">Betegségek</option>
+            <option value="kártevők">Kártevők</option>
+            <option value="szaporítás">Szaporítás</option>
+            <option value="szezonális gondozás">Szezonális gondozás</option>
+            <option value="egyéb">Egyéb</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Növény ID (opcionális)</label>
+          <input type="number" id="edit-article-plantid" class="form-control" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Kép feltöltése (opcionális)</label>
+        <input
+          type="file"
+          id="edit-article-image"
+          class="form-control"
+          accept="image/*"
+        />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Mégse
+        </button>
+        <button type="button" class="btn btn-warning" onclick="editArticle()">
+          Mentés
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>

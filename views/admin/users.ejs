@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <h2 class="text-success">👥 Felhasználók kezelése</h2>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="table-success">
+      <tr>
+        <th>ID</th>
+        <th>Felhasználónév</th>
+        <th>Email</th>
+        <th>Szerepkör</th>
+        <th>Regisztráció</th>
+        <th>Műveletek</th>
+      </tr>
+    </thead>
+    <tbody id="users-tbody"></tbody>
+  </table>
+</div>
+
+<%- include('../partials/footer') %>
